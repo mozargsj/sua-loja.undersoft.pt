@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Tema. Duas identidades que NÃO se misturam:
+   - A LOJA (Ofício): verde-garrafa, marfim, latão e bordô. Vale na raiz.
+   - O SISTEMA (Undersoft): azul-noite e laranja, tirado do CSS de
+     negocios.undersoft.pt (bloco "Identidade visual Undersoft"). Vale só
+     dentro da camada .chrome (revelação, capacidades, adesão).
+   Os tokens são por PAPEL (base, alt, destaque...), não por cor, para os
+   componentes não saberem em que identidade estão.
+   .tema-oficio / .tema-undersoft servem para mostrar as duas lado a lado.
+   ========================================================================== */
+
+/* Comum às duas identidades */
+:root {
+  --font-serif: 'Bodoni Moda Variable', 'Bodoni Moda', Didot, 'Times New Roman', serif;
+  --font-text: 'Instrument Sans Variable', 'Instrument Sans', system-ui, sans-serif;
+  --font-display: var(--font-serif);
+
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --max: 78rem;
+  --radius: 22px;
+
+  --z-grain: 20;
+  --z-bar: 30;
+  --z-nav: 40;
+  --z-sheet: 60;
+
+  /* Estados dos pedidos (telas do sistema; cada estado leva sempre o nome além da cor) */
+  --st-solicitado: #ffc15a;
+  --st-confirmado: #ff9a2f;
+  --st-atendimento: #ffb16d;
+  --st-concluido: #7fc29b;
+  --st-cancelado: #ff756f;
+  --ok: #7fc29b;
+}
+
+/* A LOJA: Ofício */
+:root,
+.tema-oficio {
+  --c-fundo: #0a1511; /* html, body, rodapé, barras */
+  --c-base: #12271f; /* superfície principal */
+  --c-alt: #e7e1ce; /* secção alternada: o "papel" da carta */
+  --c-texto: #e7e1ce;
+  --c-muted: rgb(231 225 206 / 0.68);
+  --c-rule: rgb(184 145 74 / 0.35);
+  --c-rule-forte: rgb(184 145 74 / 0.7); /* bordas de controlos */
+  --c-acento: #b8914a;
+  --c-acento-claro: #d9b56a;
+
+  --alt-fg: #14261e;
+  --alt-muted: rgb(20 38 30 / 0.7);
+  --alt-rule: rgb(20 38 30 / 0.22);
+  --alt-acento: #7c5b22;
+  --alt-btn-bg: #14261e;
+  --alt-btn-fg: #e7e1ce;
+  --alt-btn-hover: #5e1b26;
+
+  --dest-bg: #5e1b26; /* bordô de Vinho do Porto */
+  --dest-solido: #5e1b26;
+  --dest-fg: #e7e1ce;
+  --dest-muted: rgb(231 225 206 / 0.78);
+  --dest-rule: rgb(231 225 206 / 0.32);
+  --dest-acento: #d9b56a;
+  --dest-btn-bg: #e7e1ce;
+  --dest-btn-fg: #5e1b26;
+  --dest-btn-hover: #d9b56a;
+
+  --btn-bg: #b8914a;
+  --btn-fg: #0a1511;
+  --btn-hover: #e7e1ce;
+  --btn-sombra: none;
+  --ghost-borda: rgb(184 145 74 / 0.35);
+  --ghost-fundo: transparent;
+
+  --nav-bg: rgb(10 21 17 / 0.74);
+  --nav-borda: rgb(184 145 74 / 0.32);
+  --bar-bg: rgb(10 21 17 / 0.88);
+  --menu-bg: rgb(10 21 17 / 0.97);
+  --veu: rgb(10 21 17 / 0.74);
+
+  --poste-a: #e7e1ce;
+  --poste-b: #7a2634;
+  --poste-c: #1d4a3b;
+  --poste-tampa: linear-gradient(180deg, #e3c985, #b8914a 48%, #7c5b22);
+  --brilho: rgb(184 145 74 / 0.16);
+
+  --hero-bg: var(--c-base);
+  --grao: 0.07; /* grão de filme: parte da identidade da loja */
+}
+
+/* O SISTEMA: Undersoft */
+.chrome,
+.tema-undersoft {
+  --c-fundo: #050a12;
+  --c-base: #0b111c;
+  --c-alt: #111a27; /* o Undersoft é todo escuro */
+  --c-texto: #f7f8fa;
+  --c-muted: #a6afbc;
+  --c-rule: #252f3d;
+  --c-rule-forte: #66717f;
+  --c-acento: #ff5a0a;
+  --c-acento-claro: #ffb16d;
+
+  --alt-fg: #f7f8fa;
+  --alt-muted: #a6afbc;
+  --alt-rule: #252f3d;
+  --alt-acento: #ff5a0a;
+  --alt-btn-bg: var(--btn-bg);
+  --alt-btn-fg: var(--btn-fg);
+  --alt-btn-hover: var(--btn-hover);
+
+  /* O gradiente laranja da marca leva sempre texto ESCURO: branco sobre #ff5a0a dá 2,9:1 */
+  --dest-bg: linear-gradient(135deg, #ff8a22 0%, #ff5a0a 52%, #ff3c00 100%);
+  --dest-solido: #ff5a0a;
+  --dest-fg: #0b0c0e;
+  --dest-muted: rgb(11 12 14 / 0.86);
+  --dest-rule: rgb(11 12 14 / 0.28);
+  --dest-acento: #050a12;
+  --dest-btn-bg: #050a12;
+  --dest-btn-fg: #f7f8fa;
+  --dest-btn-hover: #111a27;
+
+  --btn-bg: linear-gradient(135deg, #ff8a22 0%, #ff5a0a 52%, #ff3c00 100%);
+  --btn-fg: #0b0c0e;
+  --btn-hover: linear-gradient(135deg, #ff9a2f 0%, #ff6a1a 52%, #ff4a10 100%);
+  --btn-sombra: 0 13px 32px rgb(255 90 10 / 0.26);
+  --ghost-borda: rgb(255 90 10 / 0.35);
+  --ghost-fundo: rgb(255 90 10 / 0.06);
+
+  --nav-bg: rgb(5 9 16 / 0.84);
+  --nav-borda: rgb(255 90 10 / 0.18);
+  --bar-bg: rgb(5 9 16 / 0.9);
+  --menu-bg: rgb(5 9 16 / 0.97);
+  --veu: rgb(5 9 16 / 0.78);
+
+  --poste-a: #f7f8fa;
+  --poste-b: #ff5a0a;
+  --poste-c: #111a27;
+  --poste-tampa: linear-gradient(180deg, #ffb16d, #ff5a0a 48%, #ff3600);
+  --brilho: rgb(255 90 10 / 0.16);
+
+  --hero-bg: radial-gradient(circle at -5% 4%, rgb(255 90 10 / 0.18), transparent 24%), radial-gradient(circle at 105% 22%, rgb(255 113 20 / 0.12), transparent 22%),
+    linear-gradient(180deg, #050912 0%, #07101a 42%, #04080f 100%);
+  --grao: 0;
+
+  /* No sistema, os títulos usam a grotesca: a serifada é da marca da loja */
+  --font-display: var(--font-text);
+}
+
+/* Superfícies: cada uma define as variáveis que os componentes herdam. */
+.surface--base,
+.surface--fundo,
+.nav,
+.bar {
+  --bg: var(--c-base);
+  --bg-solido: var(--c-base);
+  --fg: var(--c-texto);
+  --muted: var(--c-muted);
+  --rule: var(--c-rule);
+  --accent: var(--c-acento);
+}
+.surface--fundo,
+.nav,
+.bar {
+  --bg: var(--c-fundo);
+  --bg-solido: var(--c-fundo);
+}
+.surface--alt {
+  --bg: var(--c-alt);
+  --bg-solido: var(--c-alt);
+  --fg: var(--alt-fg);
+  --muted: var(--alt-muted);
+  --rule: var(--alt-rule);
+  --accent: var(--alt-acento);
+  --btn-bg: var(--alt-btn-bg);
+  --btn-fg: var(--alt-btn-fg);
+  --btn-hover: var(--alt-btn-hover);
+}
+.surface--destaque {
+  --bg: var(--dest-bg);
+  --bg-solido: var(--dest-solido);
+  --fg: var(--dest-fg);
+  --muted: var(--dest-muted);
+  --rule: var(--dest-rule);
+  --accent: var(--dest-acento);
+  --btn-bg: var(--dest-btn-bg);
+  --btn-fg: var(--dest-btn-fg);
+  --btn-hover: var(--dest-btn-hover);
+  --btn-sombra: none;
+}

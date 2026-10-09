@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ofício, barbearia de autor em Lisboa</title>
+    <meta name="description" content="Corte, barba à navalha e toalha quente numa barbearia de autor em Lisboa. Veja a carta com preços e reserve em menos de um minuto." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#12271f" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:title" content="Ofício, barbearia de autor em Lisboa" />
+    <meta property="og:description" content="Corte, barba à navalha e toalha quente. Veja a carta e reserve." />
+
+    <!-- Movimento permitido: esconde a entrada do hero até o GSAP arrancar. Rede de segurança de 4s. -->
+    <script>
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('anim')
+        setTimeout(function () {
+          document.documentElement.classList.remove('anim')
+        }, 4000)
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
