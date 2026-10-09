@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 dist-server
+
+# Documentação interna do projeto: fica só na máquina
+projeto.md

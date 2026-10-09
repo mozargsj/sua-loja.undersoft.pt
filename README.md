@@ -9,4 +9,4 @@ npm run build     # produção (cliente + servidor + pré-render em dist/)
 npm run preview   # servir o dist/
 ```
 
-O conteúdo vive em `src/data/`. O que foi feito, o que é real e o que é simulação estão em [projeto.md](projeto.md).
+O conteúdo vive em `src/data/`. As capacidades mostradas no capítulo do sistema indicam, em cada uma, o que existe de facto no Undersoft Commerce e o que é simulação.

@@ -1,5 +1,5 @@
 // Todo o conteúdo do site vive aqui. Tudo marcado como EXEMPLO é fictício e deve
-// ser substituído pelos dados reais da barbearia antes de publicar (ver projeto.md).
+// ser substituído pelos dados reais da barbearia antes de publicar.
 
 export const SITE = {
   name: 'Ofício', // EXEMPLO
